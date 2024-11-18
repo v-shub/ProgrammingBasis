@@ -108,6 +108,17 @@ namespace ProgrammingBasis
                         break;
                     case "10":
                         Console.WriteLine(task10 + "\n");
+                        Console.WriteLine("Введите двузначное число:");
+                        int twoDigitNum = ParseTwoDigitIntTilWin();
+                        Console.Write($"Сумма цифр числа {twoDigitNum} ");
+                        if(!IsSumOfDigitsTwoDigit(twoDigitNum, out int sumOfDigits))
+                            Console.Write("не ");
+                        Console.Write($"является двузначным числом (число {sumOfDigits})\n");
+                        bool isBigger = IsFirstDigitPowSecondBiggerThanNum(twoDigitNum, out int firstNum, out int secondNum, out double pow);
+                        Console.Write($"Число {firstNum} в степени {secondNum} равно {pow} и ");
+                        if (!isBigger)
+                            Console.Write("не ");
+                        Console.Write($"больше чем число {twoDigitNum}\n");
                         break;
                     default:
                         Console.WriteLine("It is not a task number. Try again.");
@@ -286,6 +297,35 @@ namespace ProgrammingBasis
                     pyramid += line;
                 }
                 return pyramid;
+            }
+            int ParseTwoDigitIntTilWin()
+            {
+                int x;
+                while (true)
+                {
+                    bool isNumInt = Int32.TryParse(Console.ReadLine(), out x);
+                    if (isNumInt & x.ToString().Length == 2)
+                        break;
+                    else
+                        Console.WriteLine("It is not an two-digit integer number. Try again.");
+                }
+                return x;
+            }
+            bool IsSumOfDigitsTwoDigit(int num, out int sumOfDigits)
+            {
+                sumOfDigits = num / 10 + num % 10;
+                if (sumOfDigits > 9)
+                    return true;
+                return false;
+            }
+            bool IsFirstDigitPowSecondBiggerThanNum(int num, out int firstDigit, out int secondDigit, out double firstDigitPowSecond)
+            {
+                firstDigit = num / 10;
+                secondDigit = num % 10;
+                firstDigitPowSecond = Math.Pow(firstDigit, secondDigit);
+                if(firstDigitPowSecond > num)
+                    return true;
+                return false;
             }
         }
     }
