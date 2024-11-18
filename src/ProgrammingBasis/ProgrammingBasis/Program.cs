@@ -51,6 +51,7 @@ namespace ProgrammingBasis
                         break;
                     case "3":
                         Console.WriteLine(task3);
+                        ConvertTemperature();
                         break;
                     case "4":
                         Console.WriteLine(task4);
@@ -139,6 +140,48 @@ namespace ProgrammingBasis
                         break;
                 }
                 Console.WriteLine($"Результат: {x} {action} {y} = {result}");
+            }
+            void ConvertTemperature()
+            {
+                string tempVars = "1. Цельсий\n2. Кельвин\n3. Фаренгейт";
+                Console.WriteLine("Выберите шкалу вводимой температуры:\n" + tempVars);
+                int scaleNum1 = ParseTemperatureScaleNum();
+                Console.WriteLine("Введите показатель температура (градусы):");
+                double temperature = ParseIntTilWin();
+                Console.WriteLine("Выберите тип шкалы для конвертации:\n" + tempVars);
+                int scaleNum2 = ParseTemperatureScaleNum();
+                switch(scaleNum1)
+                {
+                    case 2:
+                        temperature -= 273.15;
+                        break;
+                    case 3:
+                        temperature = (temperature - 32) * 5 / 9;
+                        break;
+                }
+                switch(scaleNum2)
+                {
+                    case 2:
+                        temperature += 273.15;
+                        break;
+                    case 3:
+                        temperature = temperature * 9 / 5 + 32;
+                        break;
+                }
+                Console.WriteLine($"Результат конвертации: {temperature}");
+            }
+            int ParseTemperatureScaleNum()
+            {
+                int scaleNum = 0;
+                while (true)
+                {
+                    bool aInt = Int32.TryParse(Console.ReadLine(), out scaleNum);
+                    if (aInt & scaleNum > 0 & scaleNum < 4)
+                        break;
+                    else
+                        Console.WriteLine("It is not the scale number. Try again.");
+                }
+                return scaleNum;
             }
         }
     }
