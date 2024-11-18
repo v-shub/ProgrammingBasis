@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Runtime.CompilerServices;
 
 namespace ProgrammingBasis
@@ -96,6 +97,14 @@ namespace ProgrammingBasis
                         break;
                     case "9":
                         Console.WriteLine(task9 + "\n");
+                        for (int i = 1; i < 10; i++)
+                        {
+                            Console.WriteLine();
+                            for (int j = 1; j < 10; j++)
+                            {
+                                Console.Write($"{i} * {j} = {i*j}\t");
+                            }
+                        }
                         break;
                     case "10":
                         Console.WriteLine(task10 + "\n");
@@ -104,7 +113,7 @@ namespace ProgrammingBasis
                         Console.WriteLine("It is not a task number. Try again.");
                         break;
                 }
-                Console.WriteLine("\nЗадача завершена, нажмите на любую клавишу, чтобы вернуться к списку задач.");
+                Console.WriteLine("\n\nЗадача завершена, нажмите на любую клавишу, чтобы вернуться к списку задач.");
                 Console.ReadLine();
                 Console.Clear();
             }
