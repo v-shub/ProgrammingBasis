@@ -304,7 +304,7 @@ namespace ProgrammingBasis
                 while (true)
                 {
                     bool isNumInt = Int32.TryParse(Console.ReadLine(), out x);
-                    if (isNumInt & x.ToString().Length == 2)
+                    if (isNumInt & x.ToString().Length == 2 & x > 0)
                         break;
                     else
                         Console.WriteLine("It is not an two-digit integer number. Try again.");
