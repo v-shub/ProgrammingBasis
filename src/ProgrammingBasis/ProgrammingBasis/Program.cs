@@ -35,7 +35,7 @@ namespace ProgrammingBasis
                 switch (choiceNum)
                 {
                     case "1":
-                        Console.WriteLine(task1);
+                        Console.WriteLine(task1 + "\n");
                         Console.WriteLine("Enter the first number:");
                         int a = ParseIntTilWin();
                         Console.WriteLine("Enter the second number:");
@@ -47,47 +47,55 @@ namespace ProgrammingBasis
                         Console.WriteLine($"The average of {a}, {b}, {c}, {d} is: {AverageOfFour(a, b, c, d)}");
                         break;
                     case "2":
-                        Console.WriteLine(task2);
+                        Console.WriteLine(task2 + "\n");
                         Calculator();
                         break;
                     case "3":
-                        Console.WriteLine(task3);
+                        Console.WriteLine(task3 + "\n");
                         ConvertTemperature();
                         break;
                     case "4":
-                        Console.WriteLine(task4);
+                        Console.WriteLine(task4 + "\n");
                         Console.WriteLine("Введите путь до файла:");
                         string fileName = FileNameFromPath(Console.ReadLine());
                         Console.WriteLine($"Имя файла: {fileName}");
                         break;
                     case "5":
-                        Console.WriteLine(task5);
+                        Console.WriteLine(task5 + "\n");
                         Console.WriteLine("Введите предложение:");
                         Console.WriteLine($"Самое длинное слово: {FindLongestWord(Console.ReadLine())}");
                         break;
                     case "6":
-                        Console.WriteLine(task6);
+                        Console.WriteLine(task6 + "\n");
                         Console.WriteLine("Введите количество значений для массивов:");
                         int length = ParseIntTilWin();
-                        Console.WriteLine("Введите значения для первого массива:");
+                        Console.WriteLine("Введите значения для первого массива (через enter):");
                         int[] nums1 = ParseIntArrayWithLength(length);
-                        Console.WriteLine("Введите значения для второго массива:");
+                        Console.WriteLine("Введите значения для второго массива (через enter):");
                         int[] nums2 = ParseIntArrayWithLength(length);
                         int[] multNums=MultiplyTwoArrays(nums1, nums2);
                         Console.Write("Результат: ");
                         foreach(int i in multNums) Console.Write(i + " ");
                         break;
                     case "7":
-                        Console.WriteLine(task7);
+                        Console.WriteLine(task7 + "\n");
+                        Console.WriteLine("Введите пять чисел (через enter):");
+                        int[] nums = new int[5];
+                        for(int i = 0; i < 5; i++)
+                        {
+                            nums[i] = ParseIntTilWin();
+                        }
+                        Console.WriteLine($"Максимальное число: {MaxOfArray(nums)}");
+                        Console.WriteLine($"Минимальное число: {MinOfArray(nums)}");
                         break;
                     case "8":
-                        Console.WriteLine(task8);
+                        Console.WriteLine(task8 + "\n");
                         break;
                     case "9":
-                        Console.WriteLine(task9);
+                        Console.WriteLine(task9 + "\n");
                         break;
                     case "10":
-                        Console.WriteLine(task10);
+                        Console.WriteLine(task10 + "\n");
                         break;
                     default:
                         Console.WriteLine("It is not a task number. Try again.");
@@ -235,6 +243,26 @@ namespace ProgrammingBasis
                     multNums[i] = nums1[i]*nums2[i];
                 }
                 return multNums;
+            }
+            int MinOfArray(int[] nums)
+            {
+                int min = nums[0];
+                foreach (int num in nums)
+                {
+                    if (num < min)
+                        min = num;
+                }
+                return min;
+            }
+            int MaxOfArray(int[] nums)
+            {
+                int max = nums[0];
+                foreach (int num in nums)
+                {
+                    if (num > max)
+                        max = num;
+                }
+                return max;
             }
         }
     }
