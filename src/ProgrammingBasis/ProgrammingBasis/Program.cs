@@ -1,4 +1,5 @@
-﻿using System.Runtime.CompilerServices;
+﻿using System.IO;
+using System.Runtime.CompilerServices;
 
 namespace ProgrammingBasis
 {
@@ -61,6 +62,8 @@ namespace ProgrammingBasis
                         break;
                     case "5":
                         Console.WriteLine(task5);
+                        Console.WriteLine("Введите предложение:");
+                        Console.WriteLine($"Самое длинное слово: {FindLongestWord(Console.ReadLine())}");
                         break;
                     case "6":
                         Console.WriteLine(task6);
@@ -190,6 +193,21 @@ namespace ProgrammingBasis
             {
                 string[] subs = path.Split('/');
                 return subs[subs.Length - 1];
+            }
+            string FindLongestWord(string sentence)
+            {
+                int maxLength = 0;
+                string longestWord = "";
+                string[] subs = sentence.Split(' ');
+                foreach (string s in subs)
+                {
+                    if (s.Length > maxLength)
+                    {
+                        longestWord = s;
+                        maxLength = s.Length;
+                    }
+                }
+                return longestWord;
             }
         }
     }
