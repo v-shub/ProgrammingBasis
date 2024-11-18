@@ -55,6 +55,9 @@ namespace ProgrammingBasis
                         break;
                     case "4":
                         Console.WriteLine(task4);
+                        Console.WriteLine("Введите путь до файла:");
+                        string fileName = FileNameFromPath(Console.ReadLine());
+                        Console.WriteLine($"Имя файла: {fileName}");
                         break;
                     case "5":
                         Console.WriteLine(task5);
@@ -182,6 +185,11 @@ namespace ProgrammingBasis
                         Console.WriteLine("It is not the scale number. Try again.");
                 }
                 return scaleNum;
+            }
+            string FileNameFromPath(string path)
+            {
+                string[] subs = path.Split('/');
+                return subs[subs.Length - 1];
             }
         }
     }
