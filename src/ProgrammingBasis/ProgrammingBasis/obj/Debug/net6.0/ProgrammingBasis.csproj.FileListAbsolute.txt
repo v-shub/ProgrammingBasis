@@ -12,3 +12,17 @@ C:\Users\user\Desktop\Shubina\ProgrammingBasis\ProgrammingBasis\obj\Debug\net6.0
 C:\Users\user\Desktop\Shubina\ProgrammingBasis\ProgrammingBasis\obj\Debug\net6.0\ProgrammingBasis.pdb
 C:\Users\user\Desktop\Shubina\ProgrammingBasis\ProgrammingBasis\obj\Debug\net6.0\ProgrammingBasis.genruntimeconfig.cache
 C:\Users\user\Desktop\Shubina\ProgrammingBasis\ProgrammingBasis\obj\Debug\net6.0\ref\ProgrammingBasis.dll
+C:\Users\user\Desktop\Shubina\ProgrammingBasis\src\ProgrammingBasis\ProgrammingBasis\bin\Debug\net6.0\ProgrammingBasis.exe
+C:\Users\user\Desktop\Shubina\ProgrammingBasis\src\ProgrammingBasis\ProgrammingBasis\bin\Debug\net6.0\ProgrammingBasis.deps.json
+C:\Users\user\Desktop\Shubina\ProgrammingBasis\src\ProgrammingBasis\ProgrammingBasis\bin\Debug\net6.0\ProgrammingBasis.runtimeconfig.json
+C:\Users\user\Desktop\Shubina\ProgrammingBasis\src\ProgrammingBasis\ProgrammingBasis\bin\Debug\net6.0\ProgrammingBasis.dll
+C:\Users\user\Desktop\Shubina\ProgrammingBasis\src\ProgrammingBasis\ProgrammingBasis\bin\Debug\net6.0\ProgrammingBasis.pdb
+C:\Users\user\Desktop\Shubina\ProgrammingBasis\src\ProgrammingBasis\ProgrammingBasis\obj\Debug\net6.0\ProgrammingBasis.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\Shubina\ProgrammingBasis\src\ProgrammingBasis\ProgrammingBasis\obj\Debug\net6.0\ProgrammingBasis.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\Shubina\ProgrammingBasis\src\ProgrammingBasis\ProgrammingBasis\obj\Debug\net6.0\ProgrammingBasis.AssemblyInfo.cs
+C:\Users\user\Desktop\Shubina\ProgrammingBasis\src\ProgrammingBasis\ProgrammingBasis\obj\Debug\net6.0\ProgrammingBasis.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Shubina\ProgrammingBasis\src\ProgrammingBasis\ProgrammingBasis\obj\Debug\net6.0\ProgrammingBasis.dll
+C:\Users\user\Desktop\Shubina\ProgrammingBasis\src\ProgrammingBasis\ProgrammingBasis\obj\Debug\net6.0\refint\ProgrammingBasis.dll
+C:\Users\user\Desktop\Shubina\ProgrammingBasis\src\ProgrammingBasis\ProgrammingBasis\obj\Debug\net6.0\ProgrammingBasis.pdb
+C:\Users\user\Desktop\Shubina\ProgrammingBasis\src\ProgrammingBasis\ProgrammingBasis\obj\Debug\net6.0\ProgrammingBasis.genruntimeconfig.cache
+C:\Users\user\Desktop\Shubina\ProgrammingBasis\src\ProgrammingBasis\ProgrammingBasis\obj\Debug\net6.0\ref\ProgrammingBasis.dll

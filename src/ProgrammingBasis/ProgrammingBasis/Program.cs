@@ -47,6 +47,7 @@ namespace ProgrammingBasis
                         break;
                     case "2":
                         Console.WriteLine(task2);
+                        Calculator();
                         break;
                     case "3":
                         Console.WriteLine(task3);
@@ -97,7 +98,48 @@ namespace ProgrammingBasis
             {
                 return (a + b + c + d)/4.00;
             }
-            
+            void Calculator()
+            {
+                double result = 0;
+                string action = "";
+                Console.WriteLine("Введите два числа:");
+                int x = ParseIntTilWin();
+                int y = ParseIntTilWin();
+                Console.WriteLine($"Вы ввели числа: {x} и {y}\nКакое действие выполнить?\n1. Сложение\n2. Вычитание\n3. Умножение\n4. Деление\n5. Нахождение остатка");
+                int actionNum;
+                while (true)
+                {
+                    bool aInt = Int32.TryParse(Console.ReadLine(), out actionNum);
+                    if (aInt & actionNum > 0 & actionNum < 6)
+                        break;
+                    else
+                        Console.WriteLine("It is not an action number. Try again.");
+                }
+                switch (actionNum)
+                {
+                    case 1:
+                        result = x + y;
+                        action = "+";
+                        break;
+                    case 2:
+                        result = x - y;
+                        action = "-";
+                        break;
+                    case 3:
+                        result = x * y;
+                        action = "*";
+                        break;
+                    case 4:
+                        result = x / Convert.ToDouble(y);
+                        action = "/";
+                        break;
+                    case 5:
+                        result = x % y;
+                        action = "%";
+                        break;
+                }
+                Console.WriteLine($"Результат: {x} {action} {y} = {result}");
+            }
         }
     }
 }
