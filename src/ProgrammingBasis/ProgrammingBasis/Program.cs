@@ -90,6 +90,9 @@ namespace ProgrammingBasis
                         break;
                     case "8":
                         Console.WriteLine(task8 + "\n");
+                        Console.WriteLine("Введите количество ступеней:");
+                        int stepsNum = ParseIntTilWin();
+                        Console.WriteLine(PyramidByNumber(stepsNum));
                         break;
                     case "9":
                         Console.WriteLine(task9 + "\n");
@@ -263,6 +266,17 @@ namespace ProgrammingBasis
                         max = num;
                 }
                 return max;
+            }
+            string PyramidByNumber(int num)
+            {
+                string pyramid = "";
+                string line = "\n";
+                for (int i = 1;i <= num; i++)
+                {
+                    line += i;
+                    pyramid += line;
+                }
+                return pyramid;
             }
         }
     }
