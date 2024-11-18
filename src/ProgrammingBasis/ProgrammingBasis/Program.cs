@@ -67,6 +67,15 @@ namespace ProgrammingBasis
                         break;
                     case "6":
                         Console.WriteLine(task6);
+                        Console.WriteLine("Введите количество значений для массивов:");
+                        int length = ParseIntTilWin();
+                        Console.WriteLine("Введите значения для первого массива:");
+                        int[] nums1 = ParseIntArrayWithLength(length);
+                        Console.WriteLine("Введите значения для второго массива:");
+                        int[] nums2 = ParseIntArrayWithLength(length);
+                        int[] multNums=MultiplyTwoArrays(nums1, nums2);
+                        Console.Write("Результат: ");
+                        foreach(int i in multNums) Console.Write(i + " ");
                         break;
                     case "7":
                         Console.WriteLine(task7);
@@ -84,7 +93,7 @@ namespace ProgrammingBasis
                         Console.WriteLine("It is not a task number. Try again.");
                         break;
                 }
-                Console.WriteLine("Задача завершена, нажмите на любую клавишу, чтобы вернуться к списку задач.");
+                Console.WriteLine("\nЗадача завершена, нажмите на любую клавишу, чтобы вернуться к списку задач.");
                 Console.ReadLine();
                 Console.Clear();
             }
@@ -93,8 +102,8 @@ namespace ProgrammingBasis
                 int x;
                 while (true)
                 {
-                    bool aInt = Int32.TryParse(Console.ReadLine(), out x);
-                    if (aInt)
+                    bool isNumInt = Int32.TryParse(Console.ReadLine(), out x);
+                    if (isNumInt)
                         break;
                     else
                         Console.WriteLine("It is not an integer number. Try again.");
@@ -181,8 +190,8 @@ namespace ProgrammingBasis
                 int scaleNum = 0;
                 while (true)
                 {
-                    bool aInt = Int32.TryParse(Console.ReadLine(), out scaleNum);
-                    if (aInt & scaleNum > 0 & scaleNum < 4)
+                    bool isNumInt = Int32.TryParse(Console.ReadLine(), out scaleNum);
+                    if (isNumInt & scaleNum > 0 & scaleNum < 4)
                         break;
                     else
                         Console.WriteLine("It is not the scale number. Try again.");
@@ -208,6 +217,24 @@ namespace ProgrammingBasis
                     }
                 }
                 return longestWord;
+            }
+            int[] ParseIntArrayWithLength(int length)
+            {
+                int[] nums = new int[length];
+                for (int i = 0; i < length; i++)
+                {
+                    nums[i] = ParseIntTilWin();
+                }
+                return nums;
+            }
+            int[] MultiplyTwoArrays(int[] nums1, int[] nums2)
+            {
+                int[] multNums = new int[nums1.Length];
+                for (int i = 0; i < nums1.Length; i++)
+                {
+                    multNums[i] = nums1[i]*nums2[i];
+                }
+                return multNums;
             }
         }
     }
